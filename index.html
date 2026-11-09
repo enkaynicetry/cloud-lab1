@@ -162,7 +162,7 @@
     <section id="models" class="card">
       <h2>Deployment Models</h2>
       <p>Service models answer <em>what</em> you get from the cloud. Deployment models answer a different question: <em>who owns and uses</em> the cloud infrastructure.</p>
-      <div class="grid">
+      <div class="grid grid-2">
         <article class="service">
           <h3>Public</h3>
           <p>The cloud is owned by a provider and shared by many customers over the internet.</p>
@@ -171,9 +171,15 @@
         </article>
         <article class="service">
           <h3>Private</h3>
-          <p>The cloud is used by only one organization, either in its own data center or hosted just for it.</p>
+          <p>The cloud is used by only one organization. It can be inside the organization's own data center or run by a third party, but it is only for that organization.</p>
           <p class="example"><strong>Example:</strong> A bank running OpenStack in its own data center</p>
           <p class="analysis"><strong>Analysis:</strong> You get strong control and easier compliance, but setup and maintenance are expensive.</p>
+        </article>
+        <article class="service">
+          <h3>Community</h3>
+          <p>The cloud is shared by several organizations that have common concerns, such as the same mission, policies or compliance rules. It is not open to the general public.</p>
+          <p class="example"><strong>Example:</strong> AWS GovCloud (US), used by eligible U.S. government organizations</p>
+          <p class="analysis"><strong>Analysis:</strong> The members share the cost and meet the same security rules together, but only members can use it and everyone must agree on common policies.</p>
         </article>
         <article class="service">
           <h3>Hybrid</h3>
@@ -183,9 +189,17 @@
         </article>
       </div>
       <div class="example-box">
-        <h4>Example: choosing a model for a university</h4>
-        <p><strong>Situation.</strong> A university has student grades, which are sensitive, and a public news website, which is not.</p>
-        <p><strong>Analysis.</strong> A public cloud for everything is cheap, but it may break privacy rules for the grades. A private cloud for everything is safe, but expensive for a website that needs to handle traffic spikes. A hybrid cloud solves both problems: grades stay private and the news site runs in the public cloud.</p>
+        <h4>Example: choosing a deployment model for a university</h4>
+        <p><strong>Situation.</strong> A university has three kinds of data and systems. The first is student grades and personal records, which are sensitive. The second is a public news website and the online course registration page, which get huge traffic at the start of each semester. The third is research data that the university wants to share with other universities, but not with the public.</p>
+        <p><strong>Goal of this example.</strong> To see which deployment model fits each need, by comparing control, cost and scalability.</p>
+        <p><strong>Analysis.</strong></p>
+        <ul>
+          <li><strong>Public cloud:</strong> This is a good fit for the news website. It is cheap, starts quickly and can scale when many students visit. However, it is not the best place for grades, because the university has less control over how and where the data is stored.</li>
+          <li><strong>Private cloud:</strong> This is a good fit for grades and personal records. The university keeps full control and can follow its own privacy rules. The price is a high cost to build and maintain it, and it is harder to scale for sudden traffic.</li>
+          <li><strong>Community cloud:</strong> This is a good fit for the shared research data. Several universities with the same needs split the cost and agree on the same security policy. The limit is that only members can join, so it is not suitable for the public website.</li>
+          <li><strong>Hybrid cloud:</strong> This combines the models above. For example, grades stay in the private cloud while the registration page uses the public cloud to handle the peak at the start of the semester. The benefit is a balance between control and scalability, but the university must connect the two clouds and manage security for both.</li>
+          <li><strong>Takeaway:</strong> There is no single best model. The right choice depends on how sensitive the data is, how much the traffic changes, and how much cost and management effort the organization can accept. In real life, many organizations end up with a hybrid approach.</li>
+        </ul>
       </div>
     </section>
 
