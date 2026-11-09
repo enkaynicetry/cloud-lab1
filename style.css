@@ -263,3 +263,6 @@ tbody tr:nth-child(even) { background: var(--sky); }
 td.cust { background: rgba(29, 111, 216, 0.14); font-weight: 600; }
 td.prov { background: rgba(46, 160, 100, 0.14); font-weight: 600; }
 .key-idea { background: var(--sky); border-radius: 10px; padding: 10px 16px; margin-top: 14px; }
+
+.grid.grid-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 800px) { .grid.grid-2 { grid-template-columns: 1fr; } }
