@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My First Cloud Website - Lab 01, Cloud Computing course, by Le Si Nhat Khue.">
+  <title>My First Cloud Website</title>
+  <link rel="icon" href="assets/cloud.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">My First Cloud Website</h1>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle menu">&#9776;</button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="#about">About Me</a>
+        <a href="#cloud">Cloud Computing</a>
+        <a href="#services">Cloud Services</a>
+        <a href="#models">Deployment Models</a>
+        <a href="#benefits">Benefits &amp; Challenges</a>
+        <a href="#goals">Skills &amp; Goals</a>
+        <a href="#deployment">Deployment</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9790;</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Cloud Computing &middot; Lab 01</p>
+        <h2>Hi hi, cloud friends! &#9729;&#65039;&#10024;</h2>
+        <p>Welcome to my little corner of the internet! Come on in, take a look around, and I hope you enjoy your stay.</p>
+      </div>
+      <img class="hero-img" src="assets/cloud.svg" alt="Illustration of a cloud with an upload arrow">
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <div class="about">
+        <img class="avatar" src="assets/avatar.jpg" alt="Portrait of Le Si Nhat Khue">
+        <div>
+          <ul class="info-list">
+            <li><strong>Full name:</strong> Le Si Nhat Khue</li>
+            <li><strong>Student ID:</strong> 24110102</li>
+            <li><strong>Course:</strong> Cloud Computing</li>
+          </ul>
+          <p>I am majoring in Software Engineering, and I love sports and technology! I am starting this course with a simple website to get familiar with the basic ideas and foundations of cloud computing. So let's learn together and have some fun with this awesome course!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOUD COMPUTING -->
+    <section id="cloud" class="card">
+      <h2>Cloud Computing</h2>
+
+      <h3>What is cloud computing?</h3>
+      <p>
+        Cloud computing means using computing resources, such as servers, storage, databases and networking,
+        over the internet instead of buying and maintaining your own hardware. A cloud provider runs huge
+        data centers and shares their resources with many customers. You can get what you need in a few
+        minutes, add or remove capacity when demand changes, and pay only for what you use. Because of this,
+        even a small team can build an application that reaches users all around the world.
+      </p>
+
+      <h3>Five essential characteristics</h3>
+      <p>The U.S. National Institute of Standards and Technology (NIST) describes cloud computing with five key characteristics:</p>
+      <ul class="feature-list">
+        <li><strong>On-demand self-service:</strong> You can create a server or storage space yourself from a web console, without asking the provider for help.</li>
+        <li><strong>Broad network access:</strong> You can reach your resources from a phone, a laptop or another server through the internet.</li>
+        <li><strong>Resource pooling:</strong> Many customers share the same physical hardware, and virtualization keeps their data separate.</li>
+        <li><strong>Rapid elasticity:</strong> Capacity can grow or shrink quickly, often automatically.</li>
+        <li><strong>Measured service:</strong> Usage is measured, so your bill follows what you actually consume.</li>
+      </ul>
+
+      <div class="example-box">
+        <h4>Example: an online shop on sale day</h4>
+        <p><strong>Situation.</strong> A small online shop normally gets about 200 visitors a day. Then a big sale starts, and 50,000 people visit the website in just two hours.</p>
+        <p><strong>Goal of this example.</strong> To see why the cloud is useful when the number of users changes a lot.</p>
+        <p><strong>Analysis.</strong></p>
+        <ul>
+          <li><strong>Without the cloud:</strong> The shop has to buy enough servers for the busiest day. If it buys too few, the website crashes during the sale and the shop loses customers. If it buys enough, most of the servers sit idle for the rest of the year, which wastes money.</li>
+          <li><strong>With the cloud:</strong> The shop can add more servers just before the sale (<em>rapid elasticity</em>) and remove them when the sale ends. It only pays for the hours it really used them (<em>measured service</em>).</li>
+          <li><strong>Takeaway:</strong> The shop no longer pays a big upfront cost for hardware (CapEx). Instead, it pays a flexible cost that grows and shrinks with demand (OpEx).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="card">
+      <h2>Cloud Services</h2>
+      <p>Cloud services are usually divided into three service models. The main difference between them is <em>how much you manage yourself</em> and how much the provider manages for you.</p>
+      <div class="grid">
+        <article class="service">
+          <h3>IaaS</h3>
+          <p class="tag">Infrastructure as a Service</p>
+          <p>The provider gives you virtual machines, storage and networks. You manage the operating system, the runtime and your applications.</p>
+          <p class="example"><strong>Example:</strong> Amazon EC2</p>
+          <p class="analysis"><strong>Advantage:</strong> You get the most control and flexibility.</p>
+          <p class="analysis"><strong>Disadvantage:</strong> You must patch the OS and set up security yourself.</p>
+        </article>
+        <article class="service">
+          <h3>PaaS</h3>
+          <p class="tag">Platform as a Service</p>
+          <p>The provider gives you a managed platform for building and running applications, so you can focus on your code instead of servers.</p>
+          <p class="example"><strong>Example:</strong> AWS Elastic Beanstalk</p>
+          <p class="analysis"><strong>Advantage:</strong> Development is faster and maintenance is lighter.</p>
+          <p class="analysis"><strong>Disadvantage:</strong> You have less control over the system underneath.</p>
+        </article>
+        <article class="service">
+          <h3>SaaS</h3>
+          <p class="tag">Software as a Service</p>
+          <p>You use a complete application over the internet, directly in a browser or an app.</p>
+          <p class="example"><strong>Example:</strong> Google Workspace</p>
+          <p class="analysis"><strong>Advantage:</strong> There is nothing to install or maintain.</p>
+          <p class="analysis"><strong>Disadvantage:</strong> You can only use the features the vendor offers.</p>
+        </article>
+      </div>
+
+      <h3>Shared responsibility: who manages each layer?</h3>
+      <p>The table shows who is responsible for each layer of the technology stack in each service model.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Technology layer</th><th>IaaS</th><th>PaaS</th><th>SaaS</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Applications</td><td class="cust">Customer</td><td class="cust">Customer</td><td class="prov">Provider</td></tr>
+            <tr><td>Data / access governance</td><td class="cust">Customer</td><td class="cust">Customer</td><td class="cust">Customer</td></tr>
+            <tr><td>Runtime / middleware</td><td class="cust">Customer</td><td class="prov">Provider</td><td class="prov">Provider</td></tr>
+            <tr><td>Operating system</td><td class="cust">Customer</td><td class="prov">Provider</td><td class="prov">Provider</td></tr>
+            <tr><td>Virtualization</td><td class="prov">Provider</td><td class="prov">Provider</td><td class="prov">Provider</td></tr>
+            <tr><td>Physical servers</td><td class="prov">Provider</td><td class="prov">Provider</td><td class="prov">Provider</td></tr>
+            <tr><td>Physical storage / network</td><td class="prov">Provider</td><td class="prov">Provider</td><td class="prov">Provider</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="key-idea"><strong>Key idea:</strong> More managed services generally mean less infrastructure administration for the customer. Notice that the customer is always responsible for their own data and who can access it, even with SaaS.</p>
+
+      <div class="example-box">
+        <h4>Example: three ways to start a blog</h4>
+        <p><strong>Situation.</strong> A student wants to start a personal blog about technology.</p>
+        <p><strong>Goal of this example.</strong> To compare IaaS, PaaS and SaaS by using the same task, and to see how the advantages and disadvantages of each model affect the choice.</p>
+        <p><strong>Analysis.</strong></p>
+        <ul>
+          <li><strong>IaaS (rent a virtual machine):</strong> The student installs a web server and blog software, and also updates the OS and handles security. This gives total freedom to customize the blog, but it takes a lot of time and technical knowledge. It is a good choice only if the student wants to learn how servers work or needs special settings.</li>
+          <li><strong>PaaS (upload the code to a platform):</strong> The student writes or customizes the blog code and uploads it. The platform takes care of the server, OS and runtime. The student saves a lot of effort, but cannot change the system underneath. It is a good choice if the student can code and wants to publish quickly.</li>
+          <li><strong>SaaS (use a blogging service):</strong> The student signs up and starts writing right away, with no setup at all. However, the blog can only look and work the way the service allows. It is the best choice if the student only cares about writing content.</li>
+          <li><strong>Takeaway:</strong> No model is better in every case. The more control you want, the more work you must do yourself. The more you want convenience, the more you accept the provider's limits.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DEPLOYMENT MODELS -->
+    <section id="models" class="card">
+      <h2>Deployment Models</h2>
+      <p>Service models answer <em>what</em> you get from the cloud. Deployment models answer a different question: <em>who owns and uses</em> the cloud infrastructure.</p>
+      <div class="grid">
+        <article class="service">
+          <h3>Public</h3>
+          <p>The cloud is owned by a provider and shared by many customers over the internet.</p>
+          <p class="example"><strong>Example:</strong> AWS, Microsoft Azure, Google Cloud</p>
+          <p class="analysis"><strong>Analysis:</strong> It has the lowest cost and the fastest start, but you have less control over how and where your data is stored.</p>
+        </article>
+        <article class="service">
+          <h3>Private</h3>
+          <p>The cloud is used by only one organization, either in its own data center or hosted just for it.</p>
+          <p class="example"><strong>Example:</strong> A bank running OpenStack in its own data center</p>
+          <p class="analysis"><strong>Analysis:</strong> You get strong control and easier compliance, but setup and maintenance are expensive.</p>
+        </article>
+        <article class="service">
+          <h3>Hybrid</h3>
+          <p>It combines a private cloud and a public cloud, and data or applications can move between them.</p>
+          <p class="example"><strong>Example:</strong> Customer records in a private cloud and the public website in a public cloud</p>
+          <p class="analysis"><strong>Analysis:</strong> It balances security and scalability, but connecting and managing both sides is more complex.</p>
+        </article>
+      </div>
+      <div class="example-box">
+        <h4>Example: choosing a model for a university</h4>
+        <p><strong>Situation.</strong> A university has student grades, which are sensitive, and a public news website, which is not.</p>
+        <p><strong>Analysis.</strong> A public cloud for everything is cheap, but it may break privacy rules for the grades. A private cloud for everything is safe, but expensive for a website that needs to handle traffic spikes. A hybrid cloud solves both problems: grades stay private and the news site runs in the public cloud.</p>
+      </div>
+    </section>
+
+    <!-- BENEFITS & CHALLENGES -->
+    <section id="benefits" class="card">
+      <h2>Benefits &amp; Challenges</h2>
+      <p>Cloud computing is powerful, but it is not always the best choice. Here are the main trade-offs.</p>
+      <div class="two-col">
+        <div class="pros">
+          <h3>Benefits</h3>
+          <ul>
+            <li><strong>Lower upfront cost:</strong> There is no hardware to buy.</li>
+            <li><strong>Flexibility:</strong> You can scale up or down at any time.</li>
+            <li><strong>Fast deployment:</strong> A new server takes minutes, not weeks.</li>
+            <li><strong>High availability:</strong> Data centers are spread across many regions.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h3>Challenges</h3>
+          <ul>
+            <li><strong>Security and privacy:</strong> Your data is stored outside your own building.</li>
+            <li><strong>Vendor lock-in:</strong> Moving to another provider can be difficult.</li>
+            <li><strong>Unexpected costs:</strong> Forgotten resources keep charging you.</li>
+            <li><strong>Internet dependence:</strong> No connection means no access.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="example-box">
+        <h4>Example: this website</h4>
+        <p><strong>Situation.</strong> This site is hosted on a free static hosting platform.</p>
+        <p><strong>Analysis.</strong> The benefits are easy to see: it costs nothing, it gets a public HTTPS link in minutes and there is no server to maintain. The challenges show up too: the site depends on the platform's rules, and it cannot run server code or store user data unless I add other services.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS & GOALS -->
+    <section id="goals" class="card">
+      <h2>Skills &amp; Goals</h2>
+      <div class="two-col">
+        <div>
+          <h3>Skills I am building</h3>
+          <div class="chips">
+            <span>HTML</span><span>CSS</span><span>Responsive design</span><span>JavaScript basics</span><span>Git &amp; GitHub</span><span>Cloud concepts</span>
+          </div>
+        </div>
+        <div>
+          <h3>Goals for this course</h3>
+          <ul>
+            <li>Understand IaaS, PaaS and SaaS well enough to choose the right one.</li>
+            <li>Deploy a website, and later a small application with a database.</li>
+            <li>Learn the basics of one major provider, such as AWS.</li>
+            <li>Practice cloud security and cost awareness.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPLOYMENT INFO -->
+    <section id="deployment" class="card">
+      <h2>Deployment Information</h2>
+      <ul class="info-list">
+        <li><strong>Chosen platform:</strong> GitHub Pages (Option B)</li>
+        <li><strong>Repository:</strong> <a href="https://github.com/enkaynicetry/cloud-lab1">github.com/enkaynicetry/cloud-lab1</a></li>
+        <li><strong>HTTPS URL:</strong> <a href="https://enkaynicetry.github.io/cloud-lab1/">https://enkaynicetry.github.io/cloud-lab1/</a></li>
+        <li><strong>Site type:</strong> Static website (HTML, CSS, JavaScript and images) with no backend or database</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact &amp; Links</h2>
+      <ul class="info-list">
+        <li><strong>Email:</strong> <a href="mailto:nhatkhue2006@gmail.com">nhatkhue2006@gmail.com</a></li>
+        <li><strong>GitHub profile:</strong> <a href="https://github.com/enkaynicetry">github.com/enkaynicetry</a></li>
+        <li><strong>Project repository:</strong> <a href="https://github.com/enkaynicetry/cloud-lab1">cloud-lab1</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Le Si Nhat Khue &ndash; 24110102 &middot; Cloud Computing &middot; Lab 01</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t">
+  <title id="t">Cloud with an upload arrow</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6fb1ff"/>
+      <stop offset="1" stop-color="#1d6fd8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="265" cy="45" r="28" fill="#ffd36b" opacity="0.9"/>
+  <path d="M90 170a45 45 0 0 1-4-89 62 62 0 0 1 118-14 52 52 0 0 1 22 103z" fill="url(#g)"/>
+  <path d="M160 150v-52m0 0-20 20m20-20 20 20" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="60" y="185" width="200" height="8" rx="4" fill="#12305c" opacity="0.15"/>
+</svg>
